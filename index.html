@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JUAL BELI AKUN BERGARANSI</title>
+
+  <style>
+    @font-face {
+      font-family: 'UrbanJungle';
+      src: url('UrbanJungleDEMO.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'ComicBook';
+      src: url('Comic Book.otf') format('opentype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'ComicBook', sans-serif;
+      background: #1a001f;
+      overflow: hidden;
+      color: #fff;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: #1a001f;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
+    .popup-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #a020f0;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px #a020f0;
+      transform: translateY(-30px);
+      z-index: 3;
+    }
+
+    h1 {
+      font-family: 'UrbanJungle', sans-serif;
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 0 0 10px #a020f0;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .menu-button {
+      background: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
+      padding: 15px;
+      border: 2px solid #a020f0;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.2s;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .menu-button:hover {
+      background: rgba(160, 32, 240, 0.9);
+      color: #fff;
+      box-shadow: 0 0 20px #a020f0, 0 0 40px #a020f0;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 500px) {
+      .popup-image {
+        width: 110px;
+        height: 110px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .menu-button {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <div class="content">
+    <img src="pp.jpg" alt="LAXSTORE" class="popup-image" />
+    <h1>LAXSTORE</h1>
+
+    <div class="menu">
+      <div class="menu-button" onclick="openLink('https://wa.me/6285642962052')">
+        ADMIN JB/REKBER (1)
+      </div>
+      <div class="menu-button" onclick="openLink('https://wa.me/628567867774')">
+        ADMIN JB/REKBER (2)
+      </div>
+      <div class="menu-button" onclick="openLink('https://chat.whatsapp.com/GXcIplJw8bj9V84zdl0uGP')">
+        GC LAXSTORE JB
+      </div>
+      <div class="menu-button" onclick="openLink('https://whatsapp.com/channel/0029Vb68P2X0LKZLMC407404')">
+        STOCK LAXSTORE
+      </div>
+      <div class="menu-button" onclick="openLink('https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012023100406698750')">
+        DONATE
+      </div>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+  <script>
+    function openLink(url) {
+      const sound = document.getElementById('clickSound');
+      sound.pause();
+      sound.currentTime = 0;
+      sound.play();
+      window.open(url, '_blank');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 700 } },
+        "color": { "value": "#a020f0" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#a020f0",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  
+  <script>
+  // Blok klik kanan
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Blok shortcut copy, inspect, dll
+  document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) return false;
+    if (e.key === 'F12') return false;
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) return false;
+  };
+</script>
+</body>
+</html>
